@@ -495,161 +495,201 @@
     "images": [
       {
         "source": "30-YanJOX4QX7tv8p63.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-39.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-39.jpg",
+        "originalSourcePosition": 1
       },
       {
         "source": "29-mePJO48Qz2sR26KY.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-38.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-38.jpg",
+        "originalSourcePosition": 2
       },
       {
         "source": "1-YbNJOQKLK1FaBZbx.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-01.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-01.jpg",
+        "originalSourcePosition": 3
       },
       {
         "source": "25-mxBXELqXwNfVXvPM.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-02.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-02.jpg",
+        "originalSourcePosition": 4
       },
       {
         "source": "5-mP4Mwaj3kwInQ670.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-09.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-09.jpg",
+        "originalSourcePosition": 5
       },
       {
         "source": "23-dOqDrBLv86u30grp.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-37.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-37.jpg",
+        "originalSourcePosition": 6
       },
       {
         "source": "16-m2WEo7vErwtQ0LKJ.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-31.jpg"
-      },
-      {
-        "source": "24-AoPJnMObJBsbwale.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-08.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-31.jpg",
+        "originalSourcePosition": 7
       },
       {
         "source": "36-AMq8VKOk4kUegPPn.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-32.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-32.jpg",
+        "originalSourcePosition": 9
+      },
+      {
+        "source": "24-AoPJnMObJBsbwale.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-08.jpg",
+        "originalSourcePosition": 8
       },
       {
         "source": "8-YZ9jWqJEwzfQMXbd.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-15.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-15.jpg",
+        "originalSourcePosition": 10
       },
       {
         "source": "38-YBgbLNPkqRTvb0DJ.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-36.jpg"
-      },
-      {
-        "source": "18-d954WJbqQXco5Wgn.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-35.jpg"
-      },
-      {
-        "source": "20-AE0r5lDnrycrw1qB.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-34.jpg"
-      },
-      {
-        "source": "17-AzGNE56Mv8U8LME8.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-33.jpg"
-      },
-      {
-        "source": "19-AQEZQO5qqWfLGrJ0.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-10.jpg"
-      },
-      {
-        "source": "15-A3Q7ovzjLvCaWDLq.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-29.jpg"
-      },
-      {
-        "source": "9-mv0JkOvPnnUyjvGV.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-17.jpg"
-      },
-      {
-        "source": "14-YX4xWv6jNkf0V2W3.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-27.jpg"
-      },
-      {
-        "source": "39-AzGNEl6wpEHk9bDy.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-14.jpg"
-      },
-      {
-        "source": "13-A3Q7ovzjDnTZVrEg.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-25.jpg"
-      },
-      {
-        "source": "26-A0xjo5ElOLsenGr2.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-26.jpg"
-      },
-      {
-        "source": "3-Awv9Exza2LUXEBj1.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-05.jpg"
-      },
-      {
-        "source": "12-dWxOp7NLvps9XXzo.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-23.jpg"
-      },
-      {
-        "source": "33-m6LbqB6nDQflqybL.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-30.jpg"
-      },
-      {
-        "source": "11-AVLaWEqxjeTl3jyX.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-21.jpg"
-      },
-      {
-        "source": "41-AE0r5JD65DsLVlzR.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-28.jpg"
-      },
-      {
-        "source": "10-mv0JkOvWp6ivLwyv.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-19.jpg"
-      },
-      {
-        "source": "40-AzGNEl6ZlXHxWbOg.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-20.jpg"
-      },
-      {
-        "source": "7-AVLaWEqaBQTrG1nG.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-13.jpg"
-      },
-      {
-        "source": "37-YbNJORKQOVU796y6.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-04.jpg"
-      },
-      {
-        "source": "6-Awv9ExzaRKtpkGNg.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-11.jpg"
-      },
-      {
-        "source": "32-dJobE91XgPfB330w.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-12.jpg"
-      },
-      {
-        "source": "4-A85VqWJzK8h0yZV1.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-07.jpg"
-      },
-      {
-        "source": "35-Aq2J1RL3kpCDJlz4.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-16.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-36.jpg",
+        "originalSourcePosition": 11
       },
       {
         "source": "31-YD0wyW2kNBhrGMwa.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-24.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-24.jpg",
+        "originalSourcePosition": 35
+      },
+      {
+        "source": "18-d954WJbqQXco5Wgn.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-35.jpg",
+        "originalSourcePosition": 12
+      },
+      {
+        "source": "20-AE0r5lDnrycrw1qB.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-34.jpg",
+        "originalSourcePosition": 13
+      },
+      {
+        "source": "17-AzGNE56Mv8U8LME8.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-33.jpg",
+        "originalSourcePosition": 14
+      },
+      {
+        "source": "19-AQEZQO5qqWfLGrJ0.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-10.jpg",
+        "originalSourcePosition": 15
+      },
+      {
+        "source": "9-mv0JkOvPnnUyjvGV.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-17.jpg",
+        "originalSourcePosition": 17
+      },
+      {
+        "source": "14-YX4xWv6jNkf0V2W3.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-27.jpg",
+        "originalSourcePosition": 18
+      },
+      {
+        "source": "39-AzGNEl6wpEHk9bDy.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-14.jpg",
+        "originalSourcePosition": 19
+      },
+      {
+        "source": "13-A3Q7ovzjDnTZVrEg.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-25.jpg",
+        "originalSourcePosition": 20
+      },
+      {
+        "source": "26-A0xjo5ElOLsenGr2.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-26.jpg",
+        "originalSourcePosition": 21
+      },
+      {
+        "source": "15-A3Q7ovzjLvCaWDLq.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-29.jpg",
+        "originalSourcePosition": 16
+      },
+      {
+        "source": "3-Awv9Exza2LUXEBj1.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-05.jpg",
+        "originalSourcePosition": 22
+      },
+      {
+        "source": "12-dWxOp7NLvps9XXzo.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-23.jpg",
+        "originalSourcePosition": 23
+      },
+      {
+        "source": "33-m6LbqB6nDQflqybL.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-30.jpg",
+        "originalSourcePosition": 24
+      },
+      {
+        "source": "11-AVLaWEqxjeTl3jyX.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-21.jpg",
+        "originalSourcePosition": 25
+      },
+      {
+        "source": "41-AE0r5JD65DsLVlzR.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-28.jpg",
+        "originalSourcePosition": 26
+      },
+      {
+        "source": "10-mv0JkOvWp6ivLwyv.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-19.jpg",
+        "originalSourcePosition": 27
+      },
+      {
+        "source": "40-AzGNEl6ZlXHxWbOg.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-20.jpg",
+        "originalSourcePosition": 28
+      },
+      {
+        "source": "7-AVLaWEqaBQTrG1nG.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-13.jpg",
+        "originalSourcePosition": 29
+      },
+      {
+        "source": "37-YbNJORKQOVU796y6.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-04.jpg",
+        "originalSourcePosition": 30
+      },
+      {
+        "source": "6-Awv9ExzaRKtpkGNg.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-11.jpg",
+        "originalSourcePosition": 31
+      },
+      {
+        "source": "32-dJobE91XgPfB330w.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-12.jpg",
+        "originalSourcePosition": 32
+      },
+      {
+        "source": "4-A85VqWJzK8h0yZV1.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-07.jpg",
+        "originalSourcePosition": 33
+      },
+      {
+        "source": "35-Aq2J1RL3kpCDJlz4.png",
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-16.jpg",
+        "originalSourcePosition": 34
       },
       {
         "source": "2-AoPJnMOJl3TzEV12.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-03.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-03.jpg",
+        "originalSourcePosition": 36
       },
       {
         "source": "34-AVLaWRqK8LuGNo88.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-18.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-18.jpg",
+        "originalSourcePosition": 37
       },
       {
         "source": "27-Yyv0EjNxy3f7k51Q.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-22.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-22.jpg",
+        "originalSourcePosition": 38
       },
       {
         "source": "21-AR035xE3E5iKLj8Y.png",
-        "local": "img/rivian-r1s-mobile-detailing-mill-bay-06.jpg"
+        "local": "img/rivian-r1s-mobile-detailing-mill-bay-06.jpg",
+        "originalSourcePosition": 39
       }
-    ]
+    ],
+    "orderNote": "Grouped by photographed area after visual review, preserving all source images; originalSourcePosition records the source gallery order."
   },
   {
     "slug": "porsche-taycan-mobile-detailing-victoria",
@@ -1401,113 +1441,141 @@
     "images": [
       {
         "source": "dd-d-ddegd-id1-2-d--dud-d1-2ddegd-d2ddegd1-2d-n-8-dJoZQPpgB1tRx24x.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-restored-01.jpg"
-      },
-      {
-        "source": "1-Aq2WgGxKyECLogy7.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-01.jpg"
-      },
-      {
-        "source": "2-mjE7g4jKOyFrQ3Jw.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-02.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-restored-01.jpg",
+        "originalSourcePosition": 1
       },
       {
         "source": "9-YD0lQEZeNrc4Vl3E.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-09.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-09.jpg",
+        "originalSourcePosition": 4
+      },
+      {
+        "source": "1-Aq2WgGxKyECLogy7.png",
+        "local": "img/sidney-subaru-crosstrek-detailing-01.jpg",
+        "originalSourcePosition": 2
       },
       {
         "source": "12-AQExPe6q10fZbOVo.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-12.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-12.jpg",
+        "originalSourcePosition": 5
+      },
+      {
+        "source": "2-mjE7g4jKOyFrQ3Jw.png",
+        "local": "img/sidney-subaru-crosstrek-detailing-02.jpg",
+        "originalSourcePosition": 3
       },
       {
         "source": "20-AQExPe6Pnrc3znq3.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-19.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-19.jpg",
+        "originalSourcePosition": 6
       },
       {
         "source": "13-YZ98BEDBbDfP1aOx.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-13.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-13.jpg",
+        "originalSourcePosition": 7
       },
       {
         "source": "4-Awv4g80gr9FkL5yp.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-04.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-04.jpg",
+        "originalSourcePosition": 8
       },
       {
         "source": "8-YD0lQEZe49Hoy0ND.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-08.jpg"
-      },
-      {
-        "source": "6-AoPWg4aKz8cOGBrr.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-06.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-08.jpg",
+        "originalSourcePosition": 9
       },
       {
         "source": "10-d951QZNq3MHValQy.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-10.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-10.jpg",
+        "originalSourcePosition": 11
+      },
+      {
+        "source": "6-AoPWg4aKz8cOGBrr.png",
+        "local": "img/sidney-subaru-crosstrek-detailing-06.jpg",
+        "originalSourcePosition": 10
       },
       {
         "source": "18-Aq2WgGxwQMUzPaw3.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-18.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-18.jpg",
+        "originalSourcePosition": 12
       },
       {
         "source": "26-dWxv3L6gG7t4nzwv.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-24.jpg"
-      },
-      {
-        "source": "25-YleWg47gjkSbGgWm.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-23.jpg"
-      },
-      {
-        "source": "24-mePxqgWQJBS25ENw.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-22.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-24.jpg",
+        "originalSourcePosition": 13
       },
       {
         "source": "21-Yan1E0eQEzcKQJ3w.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-20.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-20.jpg",
+        "originalSourcePosition": 16
+      },
+      {
+        "source": "24-mePxqgWQJBS25ENw.png",
+        "local": "img/sidney-subaru-crosstrek-detailing-22.jpg",
+        "originalSourcePosition": 15
       },
       {
         "source": "3-A1aPqzVXy4UMgX4o.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-03.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-03.jpg",
+        "originalSourcePosition": 17
       },
       {
         "source": "7-YbNB746LrwhaX1Pe.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-07.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-07.jpg",
+        "originalSourcePosition": 18
       },
       {
         "source": "29-m5KMJ8ggZOsPXr8x.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-25.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-25.jpg",
+        "originalSourcePosition": 19
       },
       {
         "source": "23-YrDWg4ObWOUz25Nr.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-21.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-21.jpg",
+        "originalSourcePosition": 20
       },
       {
         "source": "11-AzGXgMaPMBSVX38O.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-11.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-11.jpg",
+        "originalSourcePosition": 21
       },
       {
         "source": "17-mk3vg4NK9RTv7RRo.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-17.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-17.jpg",
+        "originalSourcePosition": 22
       },
       {
         "source": "16-m6LZQ2VXVDf0prOB.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-16.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-16.jpg",
+        "originalSourcePosition": 23
       },
       {
         "source": "15-mv0WrPMwz1Flpobz.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-15.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-15.jpg",
+        "originalSourcePosition": 24
       },
       {
         "source": "14-AR0L81pNaxuwK2wK.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-14.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-14.jpg",
+        "originalSourcePosition": 25
+      },
+      {
+        "source": "25-YleWg47gjkSbGgWm.png",
+        "local": "img/sidney-subaru-crosstrek-detailing-23.jpg",
+        "originalSourcePosition": 14
       },
       {
         "source": "5-AR0L81p8XPfXV95p.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-05.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-05.jpg",
+        "originalSourcePosition": 26
       },
       {
         "source": "dd-d-ddegd-id1-2-d--dud-d1-2ddegd-d2ddegd1-2d-n-9-m6LZQ2MMvkikb5Gl.png",
-        "local": "img/sidney-subaru-crosstrek-detailing-restored-27.jpg"
+        "local": "img/sidney-subaru-crosstrek-detailing-restored-27.jpg",
+        "originalSourcePosition": 27
       }
-    ]
+    ],
+    "orderNote": "Grouped by photographed area after visual review, preserving all source images; originalSourcePosition records the source gallery order."
   },
   {
     "slug": "full-trailer-detailing-vancouver-island",

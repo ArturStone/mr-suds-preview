@@ -1,0 +1,110 @@
+[
+  {
+    "vehicle": "Honda CR-V",
+    "place": "Maple Bay",
+    "detail": "Driver’s area",
+    "href": "realwork/honda-crv-mobile-detailing-maple-bay.html",
+    "before": "realwork/img/honda-crv-mobile-detailing-maple-bay-01.jpg",
+    "after": "realwork/img/honda-crv-mobile-detailing-maple-bay-02.jpg",
+    "originalPositions": [
+      1,
+      2
+    ]
+  },
+  {
+    "vehicle": "Honda CR-V",
+    "place": "Maple Bay",
+    "detail": "Driver’s footwell",
+    "href": "realwork/honda-crv-mobile-detailing-maple-bay.html",
+    "before": "realwork/img/honda-crv-mobile-detailing-maple-bay-05.jpg",
+    "after": "realwork/img/honda-crv-mobile-detailing-maple-bay-06.jpg",
+    "originalPositions": [
+      5,
+      6
+    ]
+  },
+  {
+    "vehicle": "Dodge Caravan",
+    "place": "Mill Bay",
+    "detail": "Driver’s area",
+    "href": "realwork/dodge-caravan-mobile-detailing-mill-bay.html",
+    "before": "realwork/img/dodge-caravan-mobile-detailing-mill-bay-01.jpg",
+    "after": "realwork/img/dodge-caravan-mobile-detailing-mill-bay-02.jpg",
+    "originalPositions": [
+      1,
+      2
+    ]
+  },
+  {
+    "vehicle": "Dodge Caravan",
+    "place": "Mill Bay",
+    "detail": "Cabin floor",
+    "href": "realwork/dodge-caravan-mobile-detailing-mill-bay.html",
+    "before": "realwork/img/dodge-caravan-mobile-detailing-mill-bay-04.jpg",
+    "after": "realwork/img/dodge-caravan-mobile-detailing-mill-bay-05.jpg",
+    "originalPositions": [
+      5,
+      6
+    ]
+  },
+  {
+    "vehicle": "Rivian R1S",
+    "place": "Mill Bay",
+    "detail": "Driver’s area",
+    "href": "realwork/rivian-r1s-mobile-detailing-mill-bay.html",
+    "before": "realwork/img/rivian-r1s-mobile-detailing-mill-bay-01.jpg",
+    "after": "realwork/img/rivian-r1s-mobile-detailing-mill-bay-02.jpg",
+    "originalPositions": [
+      3,
+      4
+    ]
+  },
+  {
+    "vehicle": "Rivian R1S",
+    "place": "Mill Bay",
+    "detail": "Rear seats & floor",
+    "href": "realwork/rivian-r1s-mobile-detailing-mill-bay.html",
+    "before": "realwork/img/rivian-r1s-mobile-detailing-mill-bay-23.jpg",
+    "after": "realwork/img/rivian-r1s-mobile-detailing-mill-bay-30.jpg",
+    "originalPositions": [
+      23,
+      24
+    ]
+  },
+  {
+    "vehicle": "Chevrolet Cobalt",
+    "place": "Victoria · past project",
+    "detail": "Driver’s area",
+    "href": "realwork/chevrolet-cobalt-mold-detailing-victoria.html",
+    "before": "realwork/img/chevrolet-cobalt-mold-detailing-victoria-09.jpg",
+    "after": "realwork/img/chevrolet-cobalt-mold-detailing-victoria-12.jpg",
+    "originalPositions": [
+      5,
+      6
+    ]
+  },
+  {
+    "vehicle": "Chevrolet Cobalt",
+    "place": "Victoria · past project",
+    "detail": "Centre console",
+    "href": "realwork/chevrolet-cobalt-mold-detailing-victoria.html",
+    "before": "realwork/img/chevrolet-cobalt-mold-detailing-victoria-10.jpg",
+    "after": "realwork/img/chevrolet-cobalt-mold-detailing-victoria-17.jpg",
+    "originalPositions": [
+      7,
+      8
+    ]
+  },
+  {
+    "vehicle": "Chevrolet Cobalt",
+    "place": "Victoria · past project",
+    "detail": "Rear seats",
+    "href": "realwork/chevrolet-cobalt-mold-detailing-victoria.html",
+    "before": "realwork/img/chevrolet-cobalt-mold-detailing-victoria-05.jpg",
+    "after": "realwork/img/chevrolet-cobalt-mold-detailing-victoria-18.jpg",
+    "originalPositions": [
+      9,
+      10
+    ]
+  }
+]
