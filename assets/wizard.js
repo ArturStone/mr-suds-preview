@@ -318,6 +318,11 @@
   document.querySelectorAll("[data-ms-wizard]").forEach(function (el) {
     root = el;
     el.classList.add("msw2");
+    var requestedService = new URLSearchParams(window.location.search).get("service");
+    if (requestedService === "standard" || requestedService === "premium") {
+      S.service = requestedService;
+      step = 1;
+    }
     render();
   });
 })();
