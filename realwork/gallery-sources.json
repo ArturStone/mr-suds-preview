@@ -1804,22 +1804,6 @@
         "local": "img/dodge-caravan-mobile-detailing-mill-bay-03.jpg"
       },
       {
-        "source": "11-YrDJ9yo0R7uOjB5w.png",
-        "local": "img/dodge-caravan-mobile-detailing-mill-bay-restored-12.jpg"
-      },
-      {
-        "source": "13-YD0wyJnnZ9ipXQoJ.png",
-        "local": "img/dodge-caravan-mobile-detailing-mill-bay-restored-13.jpg"
-      },
-      {
-        "source": "9-Yyv0ErQvBjF3J8qL.png",
-        "local": "img/dodge-caravan-mobile-detailing-mill-bay-restored-14.jpg"
-      },
-      {
-        "source": "8-m6LbqaxM4EUwZGVP.png",
-        "local": "img/dodge-caravan-mobile-detailing-mill-bay-restored-15.jpg"
-      },
-      {
         "source": "6-Yg2yOzkXNyFrlzxR.png",
         "local": "img/dodge-caravan-mobile-detailing-mill-bay-10.jpg"
       },
@@ -1834,6 +1818,24 @@
       {
         "source": "19-Awv9EV11EPFl0Ogl.png",
         "local": "img/dodge-caravan-mobile-detailing-mill-bay-15.jpg"
+      }
+    ],
+    "excludedSourceImages": [
+      {
+        "source": "11-YrDJ9yo0R7uOjB5w.png",
+        "reason": "Intentionally omitted from the redesigned site by the owner."
+      },
+      {
+        "source": "13-YD0wyJnnZ9ipXQoJ.png",
+        "reason": "Intentionally omitted from the redesigned site by the owner."
+      },
+      {
+        "source": "9-Yyv0ErQvBjF3J8qL.png",
+        "reason": "Intentionally omitted from the redesigned site by the owner."
+      },
+      {
+        "source": "8-m6LbqaxM4EUwZGVP.png",
+        "reason": "Intentionally omitted from the redesigned site by the owner."
       }
     ]
   },
