@@ -1,5 +1,5 @@
 /* Mr. Suds — booking wizard (draft). Self-contained. Mount: <div data-ms-wizard></div>
-   Prices verbatim from mr-suds.ca/service/*. Add-ons per owner (2026-09): pet hair $50, seat shampoo from $100.
+   Prices verbatim from mr-suds.ca/service/*. Pet hair: $40 in Standard, included in Premium (owner confirmed 2026-09-15).
    Polishing & Ceramic Coating = quote by request (owner will contact). No real calendar/instant-book: this
    collects a request and hands off via email + phone. */
 (function () {
@@ -23,8 +23,8 @@
   var ADDONS = [
     { id: "taralgae",  name: "Tar, algae & mold removal",                 price: 50, label: "+$50" },
     { id: "pethair",   name: "Pet hair removal",                          price: 40, label: "+$40", includedIn: ["premium"] },
-    { id: "brakedust", name: "Brake-dust removal",                            price: 70, label: "$70–$100 by vehicle", est: true },
-    { id: "seatwash",  name: "Seat wash (after inspection)",                  price: 0,  label: "Priced after inspection", est: true }
+    { id: "brakedust", name: "Brake-dust removal",                            price: 70, label: "$70–$100 by vehicle", est: true, includedIn: ["standard", "premium"] },
+    { id: "seatwash",  name: "Seat wash (after inspection)",                  price: 0,  label: "Priced after inspection", est: true, includedIn: ["premium"] }
   ];
   function activeAddons() {
     return ADDONS.filter(function (a) { return !a.includedIn || a.includedIn.indexOf(S.service) === -1; });
@@ -319,9 +319,9 @@
     root = el;
     el.classList.add("msw2");
     var requestedService = new URLSearchParams(window.location.search).get("service");
-    if (requestedService === "standard" || requestedService === "premium") {
+    if (requestedService === "standard" || requestedService === "premium" || requestedService === "polishing") {
       S.service = requestedService;
-      step = 1;
+      step = requestedService === "polishing" ? 3 : 1;
     }
     render();
   });
