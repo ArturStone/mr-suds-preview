@@ -243,7 +243,7 @@
       body: JSON.stringify(payload),
       signal: ctrl ? ctrl.signal : undefined
     }).then(function (r) { clearTimeout(timer); if (!r.ok) throw new Error("bad status"); return r.json(); })
-      .then(function () { sendState = "sent"; render(); })
+      .then(function () { sendState = "sent"; if (window.gtag) gtag("event", "generate_lead", {form_name: "booking_wizard"}); render(); })
       .catch(function () { clearTimeout(timer); sendState = "error"; render(); });
   }
 
