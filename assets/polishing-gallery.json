@@ -1,5 +1,32 @@
 [
-  {"src": "assets/img/polish-1-before.jpg", "alt": "Rear quarter panel with deep scratches, before polishing", "caption": "Before — rear quarter panel scratches"},
-  {"src": "assets/img/polish-1-after.jpg", "alt": "Rear quarter panel after polishing, scratches removed", "caption": "After — scratches polished out"},
-  {"src": "assets/img/polish-2-before.jpg", "alt": "Rocker panel with scratches, before polishing", "caption": "Before — rocker panel scratches"}
+  {
+    "src": "assets/img/polishing/IMG_6637.jpg",
+    "alt": "Rear bumper scuffs before polishing",
+    "caption": "Before"
+  },
+  {
+    "src": "assets/img/polishing/IMG_6640.jpg",
+    "alt": "Rear bumper after polishing",
+    "caption": "After"
+  },
+  {
+    "src": "assets/img/polishing/IMG_6638.jpg",
+    "alt": "Lower rear bumper scuffs before polishing",
+    "caption": "Before"
+  },
+  {
+    "src": "assets/img/polishing/IMG_6641.jpg",
+    "alt": "Lower rear bumper after polishing",
+    "caption": "After"
+  },
+  {
+    "src": "assets/img/polishing/IMG_6429.jpg",
+    "alt": "Pickup masked with green tape for polishing",
+    "caption": ""
+  },
+  {
+    "src": "assets/img/polishing/IMG_6434.jpg",
+    "alt": "Close-up of the pickup paint finish",
+    "caption": ""
+  }
 ]
