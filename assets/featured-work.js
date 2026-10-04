@@ -11,7 +11,7 @@
     var slides = [];
     pairs.forEach(function (pair) {
       [pair.before, pair.after].forEach(function (src) {
-        slides.push({src:src, vehicle:pair.vehicle, detail:pair.detail, href:pair.href});
+        slides.push({src:src, vehicle:pair.vehicle, detail:pair.detail, href:pair.href, tag: src === pair.before ? 'Before' : 'After'});
       });
     });
     var photoCount = slides.length;
@@ -21,8 +21,10 @@
       var slide = slides[i], photo = root.querySelector('[data-photo]');
       var cta = root.querySelector('[data-featured-cta]');
       var project = root.querySelector('[data-project]');
+      var tag = root.querySelector('[data-tag]');
       if (slide.cta) {
         photo.hidden = true;
+        if (tag) tag.hidden = true;
         cta.hidden = false;
         project.hidden = true;
         root.querySelector('[data-count]').textContent = '';
@@ -31,7 +33,8 @@
         cta.hidden = true;
         project.hidden = false;
         photo.src = slide.src;
-        photo.alt = slide.vehicle + ' — ' + slide.detail;
+        photo.alt = slide.vehicle + ' — ' + slide.detail + ', ' + slide.tag.toLowerCase();
+        if (tag) { tag.hidden = false; tag.textContent = slide.tag; tag.classList.toggle('is-after', slide.tag === 'After'); }
         project.href = slide.href; project.textContent = slide.vehicle;
         root.querySelector('[data-count]').textContent = (i + 1) + ' / ' + photoCount;
       }

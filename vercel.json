@@ -1,0 +1,341 @@
+{
+  "redirects": [
+    {
+      "source": "/service/standard-detailing",
+      "destination": "/standard-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/standard-detailing/",
+      "destination": "/standard-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/premium-detailing",
+      "destination": "/premium-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/premium-detailing/",
+      "destination": "/premium-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/polishing-ceramic-coating",
+      "destination": "/polishing-ceramic-coating.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/polishing-ceramic-coating/",
+      "destination": "/polishing-ceramic-coating.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/express-exterior-detailing",
+      "destination": "/standard-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/express-exterior-detailing/",
+      "destination": "/standard-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/express-interior-detailing",
+      "destination": "/standard-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/express-interior-detailing/",
+      "destination": "/standard-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/specialty-vehicle-washing",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/specialty-vehicle-washing/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/add-ons",
+      "destination": "/premium-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/add-ons/",
+      "destination": "/premium-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/services",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/services/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/blog",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/blog/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/about",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/about/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/thankyoupage",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/thankyoupage/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mobile-auto-detailing-duncan",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/mobile-auto-detailing-duncan/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/professional-mobile-auto-detailing-in-duncan-bc",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/professional-mobile-auto-detailing-in-duncan-bc/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/car-detailing-in-langford-mobile-auto-detailing-services-that-come-to-you",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/car-detailing-in-langford-mobile-auto-detailing-services-that-come-to-you/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/car-detailing-in-victoria-convenient-mobile-services-for-your-vehicle",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/car-detailing-in-victoria-convenient-mobile-services-for-your-vehicle/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/removing-brake-dust-tar-and-tree-sap-from-your-car",
+      "destination": "/premium-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/removing-brake-dust-tar-and-tree-sap-from-your-car/",
+      "destination": "/premium-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/the-essential-steps-to-proper-car-washing-protecting-your-vehicles-paintwork",
+      "destination": "/standard-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/the-essential-steps-to-proper-car-washing-protecting-your-vehicles-paintwork/",
+      "destination": "/standard-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/post-1-2-2-2-2-2",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post-1-2-2-2-2-2/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/five-car-wash-mistakes",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/five-car-wash-mistakes/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/equipment-for-self-washing",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/equipment-for-self-washing/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post-1-2-2",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/post-1-2-2/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/car-wash-steps-for-a-flawless-and-stunning-shine",
+      "destination": "/standard-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/car-wash-steps-for-a-flawless-and-stunning-shine/",
+      "destination": "/standard-detailing.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/self-wash-vs-professional-wash-which-is-right-for-you",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/self-wash-vs-professional-wash-which-is-right-for-you/",
+      "destination": "/",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/fonts/:file",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/img/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/assets/og/:file",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/assets/video/:file",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/realwork/img/:file",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/assets/:file",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    }
+  ]
+}

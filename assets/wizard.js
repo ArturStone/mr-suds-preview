@@ -14,16 +14,16 @@
   ];
   var SERVICES = [
     { id: "standard",  name: "Standard Detailing",            key: "std",  from: 270, quote: false,
-      blurb: "Full exterior wash + steam-cleaned interior, brake-dust removal, protective coating." },
+      blurb: "Full exterior wash, steam-cleaned interior, brake dust removal and a protective coating." },
     { id: "premium",   name: "Premium Detailing",             key: "prem", from: 420, quote: false,
-      blurb: "Everything in Standard plus clay-bar, undercarriage wash, pet-hair removal, seat & carpet shampoo." },
+      blurb: "Everything in Standard, plus clay bar, undercarriage wash, pet hair removal and seat & carpet shampoo." },
     { id: "polishing", name: "Polishing & Ceramic Coating",   key: null,   from: null, quote: true,
-      blurb: "Paint correction and ceramic coating. Priced after we see the vehicle — we’ll contact you." }
+      blurb: "Paint correction and ceramic coating, priced once we’ve seen your vehicle." }
   ];
   var ADDONS = [
     { id: "taralgae",  name: "Tar, algae & mold removal",                 price: 50, label: "+$50" },
     { id: "pethair",   name: "Pet hair removal",                          price: 40, label: "+$40", includedIn: ["premium"] },
-    { id: "brakedust", name: "Brake-dust removal",                            price: 70, label: "$70–$100 by vehicle", est: true, includedIn: ["standard", "premium"] },
+    { id: "brakedust", name: "Brake dust removal",                            price: 70, label: "$70–$100 by vehicle", est: true, includedIn: ["standard", "premium"] },
     { id: "seatwash",  name: "Seat wash (after inspection)",                  price: 0,  label: "Priced after inspection", est: true, includedIn: ["premium"] }
   ];
   function activeAddons() {
@@ -89,7 +89,7 @@
 
   function stepBody() {
     if (step === 0) {
-      return '<h3 class="msw2__h">What service?</h3><div class="msw2__cards">' +
+      return '<h3 class="msw2__h">Which service?</h3><div class="msw2__cards">' +
         SERVICES.map(function (s) {
           return '<button type="button" class="msw2__card' + (S.service === s.id ? " sel" : "") + '" data-service="' + s.id + '">' +
             "<b>" + esc(s.name) + "</b><span>" + esc(s.blurb) + "</span>" +
@@ -97,7 +97,7 @@
         }).join("") + "</div>";
     }
     if (step === 1) {
-      if (isQuote()) return skipNote("We don’t need vehicle pricing for polishing / ceramic — skip ahead.");
+      if (isQuote()) return skipNote("Polishing and ceramic coating are quoted after we see your vehicle, so you can skip this step.");
       var key = svc().key;
       return '<h3 class="msw2__h">Your vehicle</h3><div class="msw2__list">' +
         VEHICLES.map(function (v) {
@@ -105,21 +105,21 @@
             "<span class=\"msw2__row-t\"><b>" + esc(v.name) + "</b><i>" + esc(v.ex) + "</i></span>" +
             "<span class=\"msw2__row-p\">" + money(v[key]) + "</span></button>";
         }).join("") +
-        "</div><p class=\"msw2__hint\">Not sure which fits? Pick the closest — we’ll confirm.</p>";
+        "</div><p class=\"msw2__hint\">Not sure which one fits? Pick the closest and we’ll confirm.</p>";
     }
     if (step === 2) {
-      if (isQuote()) return skipNote("Add-ons are quoted with the job — skip ahead.");
+      if (isQuote()) return skipNote("Any extras are quoted together with the job, so you can skip this step.");
       return '<h3 class="msw2__h">Add-ons <small>(optional)</small></h3><div class="msw2__addons">' +
         activeAddons().map(function (a) {
           return '<label class="msw2__addon' + (S.addons[a.id] ? " sel" : "") + '">' +
             '<input type="checkbox" data-addon="' + a.id + '"' + (S.addons[a.id] ? " checked" : "") + ">" +
             "<span><b>" + esc(a.name) + "</b><i>" + esc(a.label) + (a.est ? " · confirmed on site" : "") + "</i></span></label>";
         }).join("") +
-        "</div><p class=\"msw2__hint\">Need polishing, ceramic, engine bay or something else? Add it in the notes on the next step.</p>";
+        "</div><p class=\"msw2__hint\">Want polishing, ceramic coating, an engine bay clean or something else? Add it to the notes on the next step.</p>";
     }
     if (step === 3) {
       return '<h3 class="msw2__h">Preferred date &amp; time</h3>' +
-        '<p class="msw2__hint">Just a preference — we’ll text or email to confirm the exact slot.</p>' +
+        '<p class="msw2__hint">This is just your preference. We’ll text or email you to confirm the exact time.</p>' +
         '<div class="msw2__days">' + dayChips() + "</div>" +
         '<div class="msw2__times">' +
           ["Any time", "Morning (8–12)", "Afternoon (12–4)", "Evening (4–7)"].map(function (t) {
@@ -129,7 +129,7 @@
     }
     if (step === 4) {
       return '<h3 class="msw2__h">Your details</h3>' +
-        '<p class="msw2__hint">Phone or email is enough — whichever you prefer.</p>' +
+        '<p class="msw2__hint">A phone number or an email is enough, whichever you prefer.</p>' +
         field("name", "Name", "text", true) +
         '<div class="msw2__grid">' + field("phone", "Phone", "tel", false) + field("email", "Email", "email", false) + "</div>" +
         field("address", "Service address (street, town)", "text", true) +
@@ -235,16 +235,38 @@
       Name: S.name, Phone: S.phone || "-", Email: S.email || "-", Address: S.address,
       Notes: S.notes || "-"
     };
-    var ctrl = ("AbortController" in window) ? new AbortController() : null;
-    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 10000);
-    fetch("https://formsubmit.co/ajax/Mrsuds22@gmail.com", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify(payload),
-      signal: ctrl ? ctrl.signal : undefined
-    }).then(function (r) { clearTimeout(timer); if (!r.ok) throw new Error("bad status"); return r.json(); })
-      .then(function () { sendState = "sent"; if (window.gtag) gtag("event", "generate_lead", {form_name: "booking_wizard"}); render(); })
-      .catch(function () { clearTimeout(timer); sendState = "error"; render(); });
+    function post(url, body) {
+      var ctrl = ("AbortController" in window) ? new AbortController() : null;
+      var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 10000);
+      return fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(body),
+        signal: ctrl ? ctrl.signal : undefined
+      }).then(function (r) {
+        clearTimeout(timer);
+        if (!r.ok) throw new Error("bad status");
+        return r.json();
+      }, function (e) { clearTimeout(timer); throw e; });
+    }
+    // Primary: our own server-side sender (/api/quote → SMTP2GO). If it is
+    // unavailable, fall back to FormSubmit. Either way, success is only shown
+    // when the service itself confirms delivery — never on a bare HTTP 200.
+    post("/api/quote", {
+      service: payload.Service, vehicle: payload.Vehicle, addons: payload["Add-ons"],
+      estimate: payload["Estimated total"], preferred: payload.Preferred,
+      name: S.name, phone: S.phone, email: S.email, address: S.address, notes: S.notes
+    }).then(function (j) {
+      if (!j || j.ok !== true) throw new Error("not delivered");
+    }).catch(function () {
+      return post("https://formsubmit.co/ajax/Mrsuds22@gmail.com", payload).then(function (j) {
+        if (!j || (j.success !== true && j.success !== "true")) throw new Error("not delivered");
+      });
+    }).then(function () {
+      sendState = "sent";
+      if (window.gtag) gtag("event", "generate_lead", {form_name: "booking_wizard"});
+      render();
+    }).catch(function () { sendState = "error"; render(); });
   }
 
   function renderSending() {
@@ -255,7 +277,7 @@
     root.innerHTML =
       '<div class="msw2__done">' +
         "<h3>Request sent</h3>" +
-        '<p class="msw2__hint">We got it — we&rsquo;ll email you to confirm the time.</p>' +
+        '<p class="msw2__hint">Thanks! We&rsquo;ve got your request and will text or email you shortly to confirm a time.</p>' +
         '<button type="button" class="msw2__link" data-restart>Start over</button>' +
       "</div>";
     wireRestart();
@@ -268,8 +290,8 @@
       "&body=" + encodeURIComponent(body);
     root.innerHTML =
       '<div class="msw2__done">' +
-        "<h3>Couldn’t send automatically</h3>" +
-        '<p class="msw2__hint">Sorry about that — please send it by email or give us a call instead.</p>' +
+        "<h3>Your request didn’t go through</h3>" +
+        '<p class="msw2__hint">Sorry about that. Please send it by email or give us a call instead, and we’ll sort it out.</p>' +
         '<div class="msw2__doneact">' +
           '<a class="msw2__next" href="' + mailto + '">Send by email</a>' +
           '<a class="msw2__back" href="tel:+12505109818">Call 250 510 9818</a>' +
