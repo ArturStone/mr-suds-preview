@@ -1,7 +1,7 @@
 /* Mr. Suds — booking wizard (draft). Self-contained. Mount: <div data-ms-wizard></div>
    Prices verbatim from mr-suds.ca/service/*. Pet hair: $40 in Standard, included in Premium (owner confirmed 2026-09-15).
    Polishing & Ceramic Coating = quote by request (owner will contact). No real calendar/instant-book: this
-   collects a request and hands off via email + phone. */
+   collects a request and hands off by email. */
 (function () {
   "use strict";
 
@@ -119,7 +119,7 @@
     }
     if (step === 3) {
       return '<h3 class="msw2__h">Preferred date &amp; time</h3>' +
-        '<p class="msw2__hint">This is just your preference. We’ll text or email you to confirm the exact time.</p>' +
+        '<p class="msw2__hint">This is just your preference. We’ll email you to confirm the exact time.</p>' +
         '<div class="msw2__days">' + dayChips() + "</div>" +
         '<div class="msw2__times">' +
           ["Any time", "Morning (8–12)", "Afternoon (12–4)", "Evening (4–7)"].map(function (t) {
@@ -129,9 +129,9 @@
     }
     if (step === 4) {
       return '<h3 class="msw2__h">Your details</h3>' +
-        '<p class="msw2__hint">A phone number or an email is enough, whichever you prefer.</p>' +
+        '<p class="msw2__hint">We reply by email, so please use an address you check.</p>' +
         field("name", "Name", "text", true) +
-        '<div class="msw2__grid">' + field("phone", "Phone", "tel", false) + field("email", "Email", "email", false) + "</div>" +
+        field("email", "Email", "email", true) +
         field("address", "Service address (street, town)", "text", true) +
         '<label class="msw2__lbl">Notes <small>(vehicle model, extra services, anything we should know)</small>' +
           '<textarea data-f="notes" rows="3">' + esc(S.notes) + "</textarea></label>";
@@ -181,9 +181,8 @@
     if (step === 2) return true;
     if (step === 3) return true;
     if (step === 4) {
-      var okPhone = /[0-9]{7,}/.test(S.phone.replace(/\D/g, ""));
       var okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(S.email);
-      return S.name.trim() && (okPhone || okEmail) && S.address.trim();
+      return S.name.trim() && okEmail && S.address.trim();
     }
     return true;
   }
@@ -203,7 +202,6 @@
     }
     L.push("Preferred: " + (S.date || "any date") + (S.time && S.time !== "Any time" ? " · " + S.time : ""));
     L.push("Name: " + S.name);
-    if (S.phone.trim()) L.push("Phone: " + S.phone);
     if (S.email.trim()) L.push("Email: " + S.email);
     L.push("Address: " + S.address);
     if (S.notes.trim()) L.push("Notes: " + S.notes.trim());
@@ -232,7 +230,7 @@
       "Add-ons": ad || "-",
       "Estimated total": total() != null ? money(total()) + (anyEstimate() ? "+ (add-ons confirmed on site)" : "") + " — travel fee TBD" : "By quote",
       Preferred: (S.date || "any date") + (S.time && S.time !== "Any time" ? " · " + S.time : ""),
-      Name: S.name, Phone: S.phone || "-", Email: S.email || "-", Address: S.address,
+      Name: S.name, Email: S.email, _replyto: S.email, Address: S.address,
       Notes: S.notes || "-"
     };
     function post(url, body) {
@@ -255,7 +253,7 @@
     post("/api/quote", {
       service: payload.Service, vehicle: payload.Vehicle, addons: payload["Add-ons"],
       estimate: payload["Estimated total"], preferred: payload.Preferred,
-      name: S.name, phone: S.phone, email: S.email, address: S.address, notes: S.notes
+      name: S.name, email: S.email, address: S.address, notes: S.notes
     }).then(function (j) {
       if (!j || j.ok !== true) throw new Error("not delivered");
     }).catch(function () {
@@ -277,7 +275,7 @@
     root.innerHTML =
       '<div class="msw2__done">' +
         "<h3>Request sent</h3>" +
-        '<p class="msw2__hint">Thanks! We&rsquo;ve got your request and will text or email you shortly to confirm a time.</p>' +
+        '<p class="msw2__hint">Thanks! We&rsquo;ve got your request and will email you shortly to confirm a time.</p>' +
         '<button type="button" class="msw2__link" data-restart>Start over</button>' +
       "</div>";
     wireRestart();
@@ -291,10 +289,9 @@
     root.innerHTML =
       '<div class="msw2__done">' +
         "<h3>Your request didn’t go through</h3>" +
-        '<p class="msw2__hint">Sorry about that. Please send it by email or give us a call instead, and we’ll sort it out.</p>' +
+        '<p class="msw2__hint">Sorry about that. Please send it to us by email instead, and we’ll sort it out.</p>' +
         '<div class="msw2__doneact">' +
           '<a class="msw2__next" href="' + mailto + '">Send by email</a>' +
-          '<a class="msw2__back" href="tel:+12505109818">Call 250 510 9818</a>' +
         "</div>" +
         '<button type="button" class="msw2__link" data-restart>Start over</button>' +
       "</div>";

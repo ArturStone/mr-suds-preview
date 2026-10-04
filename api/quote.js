@@ -48,15 +48,13 @@ module.exports = async (req, res) => {
   if (throttled(ip)) return fail(res, 429, 'Too many requests — please try again in a few minutes.');
 
   const name = oneLine(body.name, 100);
-  const phone = oneLine(body.phone, 40);
   const email = oneLine(body.email, 200);
   const address = oneLine(body.address, 200);
   const notes = multi(body.notes, 2000);
 
   if (!name) return fail(res, 400, 'Please enter your name.');
   if (!address) return fail(res, 400, 'Please enter the address.');
-  if (!phone && !email) return fail(res, 400, 'Please enter a phone number or an email.');
-  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fail(res, 400, 'Please enter a valid email address.');
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fail(res, 400, 'Please enter a valid email address.');
 
   const lines = [
     ['Service', oneLine(body.service, 120)],
@@ -65,8 +63,7 @@ module.exports = async (req, res) => {
     ['Estimated total', oneLine(body.estimate, 160)],
     ['Preferred', oneLine(body.preferred, 120)],
     ['Name', name],
-    ['Phone', phone || '-'],
-    ['Email', email || '-'],
+    ['Email', email],
     ['Address', address],
     ['Notes', notes || '-'],
   ].map(([k, v]) => `${k}: ${v || '-'}`);
@@ -77,9 +74,7 @@ module.exports = async (req, res) => {
     subject: `[Website] Booking request — ${name}`,
     text_body: lines.join('\n'),
   };
-  if (email) {
-    payload.custom_headers = [{ header: 'Reply-To', value: `${name.replace(/[<>"]/g, '')} <${email}>` }];
-  }
+  payload.custom_headers = [{ header: 'Reply-To', value: `${name.replace(/[<>"]/g, '')} <${email}>` }];
 
   try {
     const r = await fetch('https://api.smtp2go.com/v3/email/send', {
