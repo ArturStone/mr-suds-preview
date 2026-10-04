@@ -52,7 +52,7 @@
 .msw2 textarea{resize:vertical}
 .msw2__skip p{background:var(--w-card);border:1px dashed var(--w-line);border-radius:10px;padding:20px;color:var(--w-muted);font-size:14px;margin:0}
 .msw2__price{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin:20px 0 0;padding:14px 0 0;border-top:1px solid var(--w-line);font-size:13px;color:var(--w-muted)}
-.msw2__price--ph{opacity:.5}
+.msw2__price--ph{opacity:.8}
 .msw2__price b{font-size:22px;font-weight:800;color:var(--w-fg)}
 .msw2__nav{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:22px 0 0}
 .msw2__back,.msw2__link{background:none;border:0;color:var(--w-muted);font:inherit;font-size:14px;cursor:pointer;padding:8px 4px;text-decoration:none}
