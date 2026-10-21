@@ -119,15 +119,13 @@
     }
     if (step === 3) {
       return '<h3 class="msw2__h">Preferred date &amp; time</h3>' +
-        '<div class="msw2__note"><b>This is a request, not a confirmed booking.</b>' +
-          "Tell us which day and time suit you, and we’ll email you to agree on when we can actually come. Nothing is booked until we confirm it by email.</div>" +
+        '<p class="msw2__hint">Choose a day and time that work for you (we’ll confirm the exact time by email).</p>' +
         '<div class="msw2__days">' + dayChips() + "</div>" +
         '<div class="msw2__times">' +
           ["Any time", "Morning (9–12)", "Afternoon (12–4)", "Evening (4–7)"].map(function (t) {
             return '<button type="button" class="msw2__chip' + (S.time === t || (!S.time && t === "Any time") ? " sel" : "") + '" data-time="' + esc(t) + '">' + esc(t) + "</button>";
           }).join("") +
-        "</div>" +
-        '<p class="msw2__hint">We’re closed on Saturdays. Our pressure washer is loud, so out of respect for your neighbours we usually don’t start before 9&nbsp;am.</p>';
+        "</div>";
     }
     if (step === 4) {
       return '<h3 class="msw2__h">Your details</h3>' +
@@ -282,7 +280,7 @@
     root.innerHTML =
       '<div class="msw2__done">' +
         "<h3>Request sent</h3>" +
-        '<p class="msw2__hint">Thanks! We&rsquo;ve got your request. Nothing is booked yet: we&rsquo;ll email you shortly to agree on a day and arrival time.</p>' +
+        '<p class="msw2__hint">Thanks! We&rsquo;ve got your request and will email you shortly to confirm the exact time.</p>' +
         '<button type="button" class="msw2__link" data-restart>Start over</button>' +
       "</div>";
     wireRestart();
