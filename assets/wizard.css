@@ -39,6 +39,11 @@
 .msw2__days .msw2__chip b{font-size:11px;font-weight:700;line-height:1.2}
 .msw2__days .msw2__chip i{font-style:normal;font-size:10px;color:var(--w-muted)}
 .msw2__days .msw2__chip.sel i{color:var(--w-accent-ink)}
+.msw2__days .msw2__chip.is-off{opacity:.55;cursor:not-allowed;border-style:dashed}
+.msw2__days .msw2__chip.is-off:hover{border-color:var(--w-line)}
+.msw2__days .msw2__chip.is-off b{text-decoration:line-through}
+.msw2__note{margin:0 0 16px;padding:13px 15px;background:var(--w-card);border:1px solid var(--w-line);border-left:3px solid var(--w-accent);border-radius:10px;font-size:13.5px;line-height:1.55;color:var(--w-fg)}
+.msw2__note b{display:block;margin:0 0 4px;font-size:14px}
 .msw2__times{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 0}
 .msw2__chip{background:var(--w-card);border:1px solid var(--w-line);border-radius:8px;padding:8px 12px;min-height:40px;font:inherit;font-size:12.5px;color:var(--w-fg);cursor:pointer;transition:border-color .12s,background .12s}
 .msw2__chip:hover{border-color:var(--w-accent)}
