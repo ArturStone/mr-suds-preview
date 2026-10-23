@@ -126,7 +126,7 @@
             '<input type="checkbox" data-addon="' + a.id + '"' + (S.addons[a.id] ? " checked" : "") + ">" +
             "<span><b>" + esc(a.name) + "</b><i>" + esc(a.label) + (a.est ? " · confirmed on site" : "") + "</i></span></label>";
         }).join("") +
-        "</div><p class=\"msw2__hint\">Want polishing, ceramic coating, an engine bay clean or something else? Add it to the notes on the next step.</p>";
+        "</div><p class=\"msw2__hint\">Want polishing, ceramic coating or something else? Add it to the notes on the next step.</p>";
     }
     if (step === 3) {
       return '<h3 class="msw2__h">Preferred date &amp; time</h3>' +
@@ -144,7 +144,7 @@
         field("name", "Name", "text", true) +
         field("email", "Email", "email", true) +
         field("address", "Service address (street, town)", "text", true) +
-        '<label class="msw2__lbl">Notes <small>(vehicle model, extra services, anything we should know)</small>' +
+        '<label class="msw2__lbl">Notes <small>(vehicle model, repainted panels, rust, anything we should know)</small>' +
           '<textarea data-f="notes" rows="3">' + esc(S.notes) + "</textarea></label>";
     }
     return "";
