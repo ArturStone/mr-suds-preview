@@ -19,7 +19,7 @@
     { id: "premium",   name: "Deep Detailing",                key: "prem", from: 370, quote: false,
       blurb: "For a first detail, a vehicle that hasn’t been detailed in over 6 months, a very dirty one, or a pre-sale clean. The Regular work with several vacuum and Tornador passes, plus hidden spots under the seats, wheel liners, bug and sap removal." },
     { id: "full",      name: "Premium Detailing",             key: "full", from: 520, quote: false,
-      blurb: "When you want every detail done. Everything in Deep, plus pet hair removal, shampooed fabric mats, seat belts, leather conditioning and door seals." },
+      blurb: "When you want every detail done. Everything in Deep done by hand with brushes and picks, plus carpet steam clean, pet hair removal, shampooed fabric mats, seat belts, leather and door seals." },
     { id: "polishing", name: "Polishing & Ceramic Coating",   key: null,   from: null, quote: true,
       blurb: "Paint correction and ceramic coating, priced once we’ve seen your vehicle." }
   ];
@@ -104,7 +104,8 @@
           return '<button type="button" class="msw2__card' + (S.service === s.id ? " sel" : "") + '" data-service="' + s.id + '">' +
             "<b>" + esc(s.name) + "</b><span>" + esc(s.blurb) + "</span>" +
             "<em>" + (s.quote ? "By quote" : "From " + money(s.from)) + "</em></button>";
-        }).join("") + "</div>";
+        }).join("") + "</div>" +
+        '<p class="msw2__hint">Not sure which one? <a href="compare-packages.html">Compare the packages</a></p>';
     }
     if (step === 1) {
       if (isQuote()) return skipNote("Polishing and ceramic coating are quoted after we see your vehicle, so you can skip this step.");
