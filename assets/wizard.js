@@ -7,25 +7,28 @@
   "use strict";
 
   var VEHICLES = [
-    { id: "sedan",    name: "Sedan / Hatchback",                     ex: "Corolla, Civic, Golf",              std: 270, prem: 420 },
-    { id: "crossover",name: "Crossover / Small SUV",                  ex: "RAV4, CR-V, CX-5, Escape",          std: 290, prem: 470 },
-    { id: "suv",      name: "Full-size SUV / Minivan / ½-ton truck", ex: "Explorer, Tahoe, Sienna, F-150", std: 320, prem: 520 },
-    { id: "midtruck", name: "Midsize truck",                          ex: "Tacoma, Ranger, Ridgeline, Frontier",std: 350, prem: 620 },
-    { id: "bigtruck", name: "Large / heavy-duty truck",               ex: "F-250/350, RAM 2500/3500",          std: 370, prem: 720 }
+    { id: "sedan",    name: "Sedan / Hatchback",                     ex: "Corolla, Civic, Golf",              std: 270, prem: 370 },
+    { id: "crossover",name: "Crossover / Small SUV",                  ex: "RAV4, CR-V, CX-5, Escape",          std: 290, prem: 390 },
+    { id: "suv",      name: "Full-size SUV / Minivan / ½-ton truck", ex: "Explorer, Tahoe, Sienna, F-150", std: 320, prem: 420 },
+    { id: "midtruck", name: "Midsize truck",                          ex: "Tacoma, Ranger, Ridgeline, Frontier",std: 350, prem: 450 },
+    { id: "bigtruck", name: "Large / heavy-duty truck",               ex: "F-250/350, RAM 2500/3500",          std: 370, prem: 470 }
   ];
   var SERVICES = [
     { id: "standard",  name: "Regular Detailing",             key: "std",  from: 270, quote: false,
       blurb: "For vehicles detailed in the last 6 months. Full exterior wash, steam-cleaned interior, brake dust removal and a protective coating." },
-    { id: "premium",   name: "Deep Detailing",                key: "prem", from: 420, quote: false,
-      blurb: "For a first detail, a vehicle that hasn’t been detailed in over 6 months, a very dirty one, or a pre-sale clean. Everything in Regular, plus 2–4 vacuum and Tornador passes, hidden spots under the seats, seat shampoo, undercarriage wash and pet hair removal." },
+    { id: "premium",   name: "Deep Detailing",                key: "prem", from: 370, quote: false,
+      blurb: "For a first detail, a vehicle that hasn’t been detailed in over 6 months, a very dirty one, or a pre-sale clean. The Regular work with several vacuum and Tornador passes, plus hidden spots under the seats, wheel liners, bug and sap removal and an undercarriage wash." },
     { id: "polishing", name: "Polishing & Ceramic Coating",   key: null,   from: null, quote: true,
       blurb: "Paint correction and ceramic coating, priced once we’ve seen your vehicle." }
   ];
   var ADDONS = [
     { id: "taralgae",  name: "Tar, algae & mold removal",                 price: 50, label: "+$50" },
-    { id: "pethair",   name: "Pet hair removal",                          price: 40, label: "+$40", includedIn: ["premium"] },
+    { id: "pethair",   name: "Pet hair removal",                          price: 40, label: "+$40" },
+    { id: "mats4",     name: "Fabric floor mat shampoo (4 mats)",         price: 40, label: "+$40", grp: "mats" },
+    { id: "mats5",     name: "Fabric floor mat shampoo (4 mats + trunk mat)", price: 50, label: "+$50", grp: "mats" },
     { id: "brakedust", name: "Brake dust removal",                            price: 70, label: "$70–$100 by vehicle", est: true, includedIn: ["standard", "premium"] },
-    { id: "seatwash",  name: "Seat wash (after inspection)",                  price: 0,  label: "Priced after inspection", est: true, includedIn: ["premium"] },
+    { id: "seatwash",  name: "Seat or carpet shampoo",                        price: 0,  label: "Priced after inspection", est: true },
+    { id: "claybar",   name: "Clay bar treatment",                            price: 0,  label: "Priced after inspection", est: true },
     { id: "truckbed",  name: "Truck bed or canopy (topper) cleaning",         price: 0,  label: "Priced after inspection", est: true, onlyFor: ["suv", "midtruck", "bigtruck"] }
   ];
   function activeAddons() {
@@ -322,7 +325,7 @@
       b.addEventListener("click", function () { S.time = b.getAttribute("data-time"); render(); });
     });
     root.querySelectorAll("[data-addon]").forEach(function (c) {
-      c.addEventListener("change", function () { S.addons[c.getAttribute("data-addon")] = c.checked; render(); });
+      c.addEventListener("change", function () { var id = c.getAttribute("data-addon"), g = ADDONS.filter(function (a) { return a.id === id; })[0].grp; if (c.checked && g) ADDONS.forEach(function (a) { if (a.grp === g) S.addons[a.id] = false; }); S.addons[id] = c.checked; render(); });
     });
     root.querySelectorAll("[data-f]").forEach(function (el) {
       var ev = (el.tagName === "SELECT" || el.type === "date") ? "change" : "input";
