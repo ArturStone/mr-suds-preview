@@ -1,33 +1,36 @@
 /* Mr. Suds — booking wizard (draft). Self-contained. Mount: <div data-ms-wizard></div>
    Prices verbatim from mr-suds.ca/service/*. Pet hair: $40 in Regular, included in Deep (owner confirmed 2026-09-15).
-   Packages renamed 2026-10-22: Standard -> Regular (upkeep, detailed in the last 6 months), Premium -> Deep (first detail or very dirty). Ids stay "standard"/"premium".
+   Packages renamed 2026-10-22: Standard -> Regular (upkeep, detailed in the last 6 months), Premium -> Deep (first detail or very dirty). Ids stay "standard"/"premium". 2026-10-23: added Premium Detailing, id "full".
    Polishing & Ceramic Coating = quote by request (owner will contact). No real calendar/instant-book: this
    collects a request and hands off by email. */
 (function () {
   "use strict";
 
   var VEHICLES = [
-    { id: "sedan",    name: "Sedan / Hatchback",                     ex: "Corolla, Civic, Golf",              std: 270, prem: 370 },
-    { id: "crossover",name: "Crossover / Small SUV",                  ex: "RAV4, CR-V, CX-5, Escape",          std: 290, prem: 390 },
-    { id: "suv",      name: "Full-size SUV / Minivan / ½-ton truck", ex: "Explorer, Tahoe, Sienna, F-150", std: 320, prem: 420 },
-    { id: "midtruck", name: "Midsize truck",                          ex: "Tacoma, Ranger, Ridgeline, Frontier",std: 350, prem: 450 },
-    { id: "bigtruck", name: "Large / heavy-duty truck",               ex: "F-250/350, RAM 2500/3500",          std: 370, prem: 470 }
+    { id: "sedan",    name: "Sedan / Hatchback",                     ex: "Corolla, Civic, Golf",              std: 270, prem: 370, full: 520 },
+    { id: "crossover",name: "Crossover / Small SUV",                  ex: "RAV4, CR-V, CX-5, Escape",          std: 290, prem: 390, full: 540 },
+    { id: "suv",      name: "Full-size SUV / Minivan / ½-ton truck", ex: "Explorer, Tahoe, Sienna, F-150", std: 320, prem: 420, full: 570 },
+    { id: "midtruck", name: "Midsize truck",                          ex: "Tacoma, Ranger, Ridgeline, Frontier",std: 350, prem: 450, full: 600 },
+    { id: "bigtruck", name: "Large / heavy-duty truck",               ex: "F-250/350, RAM 2500/3500",          std: 370, prem: 470, full: 620 }
   ];
   var SERVICES = [
     { id: "standard",  name: "Regular Detailing",             key: "std",  from: 270, quote: false,
       blurb: "For vehicles detailed in the last 6 months. Full exterior wash, steam-cleaned interior, brake dust removal and a protective coating." },
     { id: "premium",   name: "Deep Detailing",                key: "prem", from: 370, quote: false,
-      blurb: "For a first detail, a vehicle that hasn’t been detailed in over 6 months, a very dirty one, or a pre-sale clean. The Regular work with several vacuum and Tornador passes, plus hidden spots under the seats, wheel liners, bug and sap removal and an undercarriage wash." },
+      blurb: "For a first detail, a vehicle that hasn’t been detailed in over 6 months, a very dirty one, or a pre-sale clean. The Regular work with several vacuum and Tornador passes, plus hidden spots under the seats, wheel liners, bug and sap removal." },
+    { id: "full",      name: "Premium Detailing",             key: "full", from: 520, quote: false,
+      blurb: "When you want every detail done. Everything in Deep, plus pet hair removal, shampooed fabric mats, seat belts, leather conditioning and door seals." },
     { id: "polishing", name: "Polishing & Ceramic Coating",   key: null,   from: null, quote: true,
       blurb: "Paint correction and ceramic coating, priced once we’ve seen your vehicle." }
   ];
   var ADDONS = [
     { id: "taralgae",  name: "Tar, algae & mold removal",                 price: 50, label: "+$50" },
-    { id: "pethair",   name: "Pet hair removal",                          price: 40, label: "+$40" },
-    { id: "mats4",     name: "Fabric floor mat shampoo (4 mats)",         price: 40, label: "+$40", grp: "mats" },
-    { id: "mats5",     name: "Fabric floor mat shampoo (4 mats + trunk mat)", price: 50, label: "+$50", grp: "mats" },
-    { id: "brakedust", name: "Brake dust removal",                            price: 70, label: "$70–$100 by vehicle", est: true, includedIn: ["standard", "premium"] },
+    { id: "pethair",   name: "Pet hair removal",                          price: 40, label: "+$40", includedIn: ["full"] },
+    { id: "mats4",     name: "Fabric floor mat shampoo (4 mats)",         price: 40, label: "+$40", grp: "mats", includedIn: ["full"] },
+    { id: "mats5",     name: "Fabric floor mat shampoo (4 mats + trunk mat)", price: 50, label: "+$50", grp: "mats", includedIn: ["full"] },
+    { id: "brakedust", name: "Brake dust removal",                            price: 70, label: "$70–$100 by vehicle", est: true, includedIn: ["standard", "premium", "full"] },
     { id: "seatwash",  name: "Seat or carpet shampoo",                        price: 0,  label: "Priced after inspection", est: true },
+    { id: "underwash", name: "Undercarriage wash",                            price: 0,  label: "Priced after inspection", est: true },
     { id: "claybar",   name: "Clay bar treatment",                            price: 0,  label: "Priced after inspection", est: true },
     { id: "truckbed",  name: "Truck bed or canopy (topper) cleaning",         price: 0,  label: "Priced after inspection", est: true, onlyFor: ["suv", "midtruck", "bigtruck"] }
   ];
@@ -350,7 +353,7 @@
     root = el;
     el.classList.add("msw2");
     var requestedService = new URLSearchParams(window.location.search).get("service");
-    if (requestedService === "standard" || requestedService === "premium" || requestedService === "polishing") {
+    if (requestedService === "standard" || requestedService === "premium" || requestedService === "full" || requestedService === "polishing") {
       S.service = requestedService;
       step = requestedService === "polishing" ? 3 : 1;
     }
