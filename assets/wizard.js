@@ -1,5 +1,5 @@
 /* Mr. Suds — booking wizard (draft). Self-contained. Mount: <div data-ms-wizard></div>
-   Prices verbatim from mr-suds.ca/service/*. Pet hair: $40 in Regular, included in Deep (owner confirmed 2026-09-15).
+   Prices verbatim from mr-suds.ca/service/*. Pet hair: $20 light / $40 heavy in Regular and Deep, included in Premium (owner, 2026-10-28).
    Packages renamed 2026-10-22: Standard -> Regular (upkeep, detailed in the last 6 months), Premium -> Deep (first detail or very dirty). Ids stay "standard"/"premium". 2026-10-23: added Premium Detailing, id "full".
    Polishing & Ceramic Coating = quote by request (owner will contact). No real calendar/instant-book: this
    collects a request and hands off by email. */
@@ -25,7 +25,8 @@
   ];
   var ADDONS = [
     { id: "taralgae",  name: "Tar, algae & mold removal",                 price: 50, label: "+$50" },
-    { id: "pethair",   name: "Pet hair removal",                          price: 40, label: "+$40", includedIn: ["full"] },
+    { id: "pethair20", name: "Pet hair removal, light",                   price: 20, label: "+$20", grp: "pet", includedIn: ["full"] },
+    { id: "pethair",   name: "Pet hair removal, heavy",                   price: 40, label: "+$40", grp: "pet", includedIn: ["full"] },
     { id: "mats4",     name: "Fabric floor mat shampoo (4 mats)",         price: 40, label: "+$40", grp: "mats", includedIn: ["full"] },
     { id: "mats5",     name: "Fabric floor mat shampoo (4 mats + trunk mat)", price: 50, label: "+$50", grp: "mats", includedIn: ["full"] },
     { id: "brakedust", name: "Brake dust removal",                            price: 70, label: "$70–$100 by vehicle", est: true, includedIn: ["standard", "premium", "full"] },
