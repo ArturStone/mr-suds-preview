@@ -7,13 +7,15 @@
   "use strict";
 
   var VEHICLES = [
-    { id: "sedan",    name: "Sedan / Hatchback",                     ex: "Corolla, Civic, Golf",              std: 270, prem: 370, full: 520 },
-    { id: "crossover",name: "Crossover / Small SUV",                  ex: "RAV4, CR-V, CX-5, Escape",          std: 290, prem: 390, full: 540 },
-    { id: "midtruck", name: "Midsize truck",                          ex: "Tacoma, Ranger, Ridgeline, Frontier",std: 320, prem: 420, full: 570 },
-    { id: "suv",      name: "Full-size SUV / Minivan / ½-ton truck", ex: "Explorer, Tahoe, Sienna, F-150", std: 350, prem: 450, full: 600 },
-    { id: "bigtruck", name: "Large / heavy-duty truck",               ex: "F-250/350, RAM 2500/3500",          std: 370, prem: 470, full: 620 }
+    { id: "sedan",    name: "Sedan / Hatchback",                     ex: "Corolla, Civic, Golf",              int: 230, std: 270, prem: 370, full: 520 },
+    { id: "crossover",name: "Crossover / Small SUV",                  ex: "RAV4, CR-V, CX-5, Escape",          int: 250, std: 290, prem: 390, full: 540 },
+    { id: "midtruck", name: "Midsize truck",                          ex: "Tacoma, Ranger, Ridgeline, Frontier",int: 280, std: 320, prem: 420, full: 570 },
+    { id: "suv",      name: "Full-size SUV / Minivan / ½-ton truck", ex: "Explorer, Tahoe, Sienna, F-150", int: 310, std: 350, prem: 450, full: 600 },
+    { id: "bigtruck", name: "Large / heavy-duty truck",               ex: "F-250/350, RAM 2500/3500",          int: 330, std: 370, prem: 470, full: 620 }
   ];
   var SERVICES = [
+    { id: "interior",  name: "Interior Detailing",            key: "int",  from: 230, quote: false, time: "About 1.5–3 hours",
+      blurb: "The whole interior, done by hand. Vacuum and Tornador passes, wet wipe with UV protectant, leather care, door pockets and jambs, seat belts, windows inside and out, trunk." },
     { id: "standard",  name: "Regular Detailing",             key: "std",  from: 270, quote: false, time: "About 3 hours",
       blurb: "For vehicles detailed in the last 6 months. Full exterior wash, steam-cleaned interior, brake dust removal and spray wax." },
     { id: "premium",   name: "Deep Detailing",                key: "prem", from: 370, quote: false, time: "About 3–5 hours",
@@ -24,20 +26,20 @@
       blurb: "Polishing from $350 and ceramic coating from $650. Final price once we’ve seen your paint." }
   ];
   var ADDONS = [
-    { id: "taralgae",  name: "Tar, algae & mold removal",                 price: 50, label: "+$50" },
+    { id: "taralgae",  name: "Tar, algae & mold removal",                 price: 50, label: "+$50", notFor: ["interior"] },
     { id: "pethair20", name: "Pet hair removal, light",                   price: 20, label: "+$20", grp: "pet", includedIn: ["full"] },
     { id: "pethair",   name: "Pet hair removal, heavy",                   price: 40, label: "+$40", grp: "pet", includedIn: ["full"] },
     { id: "mats4",     name: "Fabric floor mat shampoo (4 mats)",         price: 40, label: "+$40", grp: "mats", includedIn: ["full"] },
     { id: "mats5",     name: "Fabric floor mat shampoo (4 mats + trunk mat)", price: 50, label: "+$50", grp: "mats", includedIn: ["full"] },
-    { id: "brakedust", name: "Brake dust removal",                            price: 70, label: "$70–$100 by vehicle", est: true, includedIn: ["standard", "premium", "full"] },
-    { id: "seatwash",  name: "Seat or carpet shampoo",                        price: 0,  label: "Priced after inspection", est: true },
-    { id: "underwash", name: "Undercarriage wash",                            price: 0,  label: "Priced after inspection", est: true },
-    { id: "claybar",   name: "Clay bar treatment",                            price: 0,  label: "Priced after inspection", est: true },
-    { id: "truckbed",  name: "Truck bed or canopy (topper) cleaning",         price: 0,  label: "Priced after inspection", est: true, onlyFor: ["suv", "midtruck", "bigtruck"] }
+    { id: "brakedust", name: "Brake dust removal",                            price: 70, label: "$70–$100 by vehicle", est: true, includedIn: ["standard", "premium", "full"], notFor: ["interior"] },
+    { id: "seatwash",  name: "Seat or carpet extractor cleaning",                price: 0,  label: "Seats: $50 for 2, $100 for all · carpets priced after inspection", est: true },
+    { id: "underwash", name: "Undercarriage wash",                            price: 0,  label: "Priced after inspection", est: true, notFor: ["interior"] },
+    { id: "claybar",   name: "Clay bar treatment",                            price: 0,  label: "Priced after inspection", est: true, notFor: ["interior"] },
+    { id: "truckbed",  name: "Truck bed or canopy (topper) cleaning",         price: 0,  label: "Priced after inspection", est: true, onlyFor: ["suv", "midtruck", "bigtruck"], notFor: ["interior"] }
   ];
   function activeAddons() {
     return ADDONS.filter(function (a) {
-      return (!a.includedIn || a.includedIn.indexOf(S.service) === -1) && (!a.onlyFor || a.onlyFor.indexOf(S.vehicle) !== -1);
+      return (!a.includedIn || a.includedIn.indexOf(S.service) === -1) && (!a.notFor || a.notFor.indexOf(S.service) === -1) && (!a.onlyFor || a.onlyFor.indexOf(S.vehicle) !== -1);
     });
   }
 
@@ -355,7 +357,7 @@
     root = el;
     el.classList.add("msw2");
     var requestedService = new URLSearchParams(window.location.search).get("service");
-    if (requestedService === "standard" || requestedService === "premium" || requestedService === "full" || requestedService === "polishing") {
+    if (requestedService === "interior" || requestedService === "standard" || requestedService === "premium" || requestedService === "full" || requestedService === "polishing") {
       S.service = requestedService;
       step = requestedService === "polishing" ? 3 : 1;
     }
