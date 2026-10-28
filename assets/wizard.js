@@ -7,14 +7,14 @@
   "use strict";
 
   var VEHICLES = [
-    { id: "sedan",    name: "Sedan / Hatchback",                     ex: "Corolla, Civic, Golf",              int: 230, std: 270, prem: 370, full: 520 },
-    { id: "crossover",name: "Crossover / Small SUV",                  ex: "RAV4, CR-V, CX-5, Escape",          int: 250, std: 290, prem: 390, full: 540 },
-    { id: "midtruck", name: "Midsize truck",                          ex: "Tacoma, Ranger, Ridgeline, Frontier",int: 280, std: 320, prem: 420, full: 570 },
-    { id: "suv",      name: "Full-size SUV / Minivan / ½-ton truck", ex: "Explorer, Tahoe, Sienna, F-150", int: 310, std: 350, prem: 450, full: 600 },
-    { id: "bigtruck", name: "Large / heavy-duty truck",               ex: "F-250/350, RAM 2500/3500",          int: 330, std: 370, prem: 470, full: 620 }
+    { id: "sedan",    name: "Sedan / Hatchback",                     ex: "Corolla, Civic, Golf",              int: 210, std: 270, prem: 370, full: 520 },
+    { id: "crossover",name: "Crossover / Small SUV",                  ex: "RAV4, CR-V, CX-5, Escape",          int: 220, std: 290, prem: 390, full: 540 },
+    { id: "midtruck", name: "Midsize truck",                          ex: "Tacoma, Ranger, Ridgeline, Frontier",int: 230, std: 320, prem: 420, full: 570 },
+    { id: "suv",      name: "Full-size SUV / Minivan / ½-ton truck", ex: "Explorer, Tahoe, Sienna, F-150", int: 250, std: 350, prem: 450, full: 600 },
+    { id: "bigtruck", name: "Large / heavy-duty truck",               ex: "F-250/350, RAM 2500/3500",          int: 250, std: 370, prem: 470, full: 620 }
   ];
   var SERVICES = [
-    { id: "interior",  name: "Interior Detailing",            key: "int",  from: 230, quote: false, time: "About 1.5–3 hours",
+    { id: "interior",  name: "Interior Detailing",            key: "int",  from: 210, quote: false, time: "About 1.5–3 hours",
       blurb: "The whole interior, done by hand. Vacuum and Tornador passes, wet wipe with UV protectant, leather care, door pockets and jambs, seat belts, windows inside and out, trunk." },
     { id: "standard",  name: "Regular Detailing",             key: "std",  from: 270, quote: false, time: "About 3 hours",
       blurb: "For vehicles detailed in the last 6 months. Full exterior wash, steam-cleaned interior, brake dust removal and spray wax." },
