@@ -103,7 +103,7 @@
         SERVICES.map(function (s) {
           return '<button type="button" class="msw2__card' + (S.service === s.id ? " sel" : "") + '" data-service="' + s.id + '">' +
             "<b>" + esc(s.name) + "</b><span>" + esc(s.blurb) + "</span>" +
-            "<em>" + (s.quote ? "By quote" : "From " + money(s.from) + " + tax · " + s.time) + "</em></button>";
+            "<em>" + (s.quote ? "By quote" : "From " + money(s.from) + " · " + s.time) + "</em></button>";
         }).join("") + "</div>" +
         '<p class="msw2__hint">Not sure which one? <a href="compare-packages.html">Compare the packages</a></p>';
     }
@@ -116,7 +116,7 @@
             "<span class=\"msw2__row-t\"><b>" + esc(v.name) + "</b><i>" + esc(v.ex) + "</i></span>" +
             "<span class=\"msw2__row-p\">" + money(v[key]) + "</span></button>";
         }).join("") +
-        "</div><p class=\"msw2__hint\">Starting prices, plus tax. If the vehicle has no heavy stains or unusual dirt, the price stays as listed. Not sure which size fits? Pick the closest and we’ll confirm. Truck prices cover the cab; the bed and canopy are extra.</p>";
+        "</div><p class=\"msw2__hint\">Starting prices. If the vehicle has no heavy stains or unusual dirt, the price stays as listed. Not sure which size fits? Pick the closest and we’ll confirm. Truck prices cover the cab; the bed and canopy are extra.</p>";
     }
     if (step === 2) {
       if (isQuote()) return skipNote("Any extras are quoted together with the job, so you can skip this step.");
@@ -187,7 +187,7 @@
     var t = total();
     return '<div class="msw2__price">' +
       "<span>" + esc(svc().name) + (veh() ? " · " + esc(veh().name) : "") + (anyEstimate() ? "  · add-ons est." : "") + "</span>" +
-      "<b>" + money(t) + (anyEstimate() ? "+" : "") + " + tax</b>" +
+      "<b>" + money(t) + (anyEstimate() ? "+" : "") + "</b>" +
       "</div>";
   }
 
@@ -212,7 +212,7 @@
       var ad = activeAddons().filter(function (a) { return S.addons[a.id]; }).map(function (a) { return a.name + " (" + a.label + ")"; });
       if (ad.length) L.push("Add-ons: " + ad.join(", "));
       var t = total();
-      if (t != null) L.push("Estimated total: " + money(t) + " + tax" + (anyEstimate() ? " + (add-ons confirmed on site)" : "") + " — travel fee TBD");
+      if (t != null) L.push("Estimated total: " + money(t) + (anyEstimate() ? " + (add-ons confirmed on site)" : "") + " — travel fee TBD");
     } else {
       L.push("Note: polishing/ceramic — quote by request");
     }
@@ -244,7 +244,7 @@
       Service: svc() ? svc().name : "-",
       Vehicle: (!isQuote() && veh()) ? veh().name : "-",
       "Add-ons": ad || "-",
-      "Estimated total": total() != null ? money(total()) + " + tax" + (anyEstimate() ? " + (add-ons confirmed on site)" : "") + " — travel fee TBD" : "By quote",
+      "Estimated total": total() != null ? money(total()) + (anyEstimate() ? " + (add-ons confirmed on site)" : "") + " — travel fee TBD" : "By quote",
       Preferred: (S.date || "any date") + (S.time && S.time !== "Any time" ? " · " + S.time : ""),
       Name: S.name, Email: S.email, _replyto: S.email, Address: S.address,
       Notes: S.notes || "-"
