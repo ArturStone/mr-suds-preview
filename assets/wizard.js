@@ -15,7 +15,7 @@
   ];
   var SERVICES = [
     { id: "standard",  name: "Regular Detailing",             key: "std",  from: 270, quote: false, time: "About 3 hours",
-      blurb: "For vehicles detailed in the last 6 months. Full exterior wash, steam-cleaned interior, brake dust removal and a protective coating." },
+      blurb: "For vehicles detailed in the last 6 months. Full exterior wash, steam-cleaned interior, brake dust removal and spray wax." },
     { id: "premium",   name: "Deep Detailing",                key: "prem", from: 370, quote: false, time: "About 3–5 hours",
       blurb: "For a first detail, a vehicle that hasn’t been detailed in over 6 months, a very dirty one, or a pre-sale clean. The Regular work with several vacuum and Tornador passes, plus hidden spots under the seats, wheel liners, bug and sap removal." },
     { id: "full",      name: "Premium Detailing",             key: "full", from: 520, quote: false, time: "About 4–6 hours",
