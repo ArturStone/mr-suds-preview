@@ -21,7 +21,7 @@
     { id: "full",      name: "Premium Detailing",             key: "full", from: 520, quote: false, time: "About 4–6 hours",
       blurb: "When you want every detail done. Everything in Deep done by hand with brushes and picks, plus carpet steam clean, pet hair removal, shampooed fabric mats, seat belts, leather and door seals." },
     { id: "polishing", name: "Polishing & Ceramic Coating",   key: null,   from: null, quote: true,
-      blurb: "Polishing from $350 and ceramic coating from $650, plus tax. Final price once we’ve seen your paint." }
+      blurb: "Polishing from $350 and ceramic coating from $650. Final price once we’ve seen your paint." }
   ];
   var ADDONS = [
     { id: "taralgae",  name: "Tar, algae & mold removal",                 price: 50, label: "+$50" },
