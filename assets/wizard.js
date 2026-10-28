@@ -278,7 +278,7 @@
       });
     }).then(function () {
       sendState = "sent";
-      if (window.gtag) gtag("event", "generate_lead", {form_name: "booking_wizard"});
+      if (window.gtag) { gtag("event", "generate_lead", {form_name: "booking_wizard"}); gtag("event", "conversion", {send_to: "AW-16718958115/sBUcCMOClK0dEKOcnKQ-"}); }
       render();
     }).catch(function () { sendState = "error"; render(); });
   }
