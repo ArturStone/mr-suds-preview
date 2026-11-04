@@ -294,15 +294,16 @@
     root.innerHTML =
       '<div class="msw2__done">' +
         "<h3>Request sent</h3>" +
-        '<p class="msw2__hint">Thanks! We&rsquo;ve got your request and will email you shortly to confirm the exact time.</p>' +
+        '<p class="msw2__hint">Thanks! We&rsquo;ve got your request and will email you within 24 hours to confirm the exact time.</p>' +
         '<h4 class="msw2__sub">Before we arrive</h4>' +
+        '<p class="msw2__hint">It helps a lot if you get the car ready:</p>' +
         '<ul class="msw2__prep">' +
-          "<li>Please take your personal belongings out of the vehicle.</li>" +
-          "<li>We bring the equipment. We just need a water tap and a power outlet.</li>" +
-          "<li>Park where we can walk around the whole vehicle.</li>" +
+          "<li>Please take your personal belongings out of the car, including the glovebox and centre console.</li>" +
+          "<li>Please have a water tap and a power outlet available.</li>" +
+          "<li>Optional tip: if you can, park away from your garage door and other cars, so no water or dirt splashes on them.</li>" +
         "</ul>" +
-        '<p class="msw2__hint"><a href="realwork/index.html">See examples of our work</a> &middot; <a href="policy.html">Our policy</a></p>' +
-        '<button type="button" class="msw2__link" data-restart>Start over</button>' +
+        '<p class="msw2__hint"><a href="realwork/index.html">See examples of our work</a> &middot; <a href="policy.html">Booking policy</a></p>' +
+        '<button type="button" class="msw2__link" data-restart>Book another vehicle</button>' +
       "</div>";
     wireRestart();
     root.scrollIntoView({ behavior: "smooth", block: "start" });
