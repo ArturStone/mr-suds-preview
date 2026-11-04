@@ -29,6 +29,10 @@ function fail(res, status, error) {
 }
 
 module.exports = async (req, res) => {
+  // Health check for monitoring: 200 only when the sender key is configured.
+  if (req.method === 'GET') {
+    return res.status(process.env.SMTP2GO_API_KEY ? 200 : 503).json({ ready: Boolean(process.env.SMTP2GO_API_KEY) });
+  }
   if (req.method !== 'POST') return fail(res, 405, 'Method not allowed.');
 
   const origin = req.headers.origin;

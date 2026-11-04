@@ -70,3 +70,8 @@
 .msw2__sum{white-space:pre-wrap;background:var(--w-card);border:1px solid var(--w-line);border-radius:10px;padding:18px;font-size:13px;line-height:1.6;color:var(--w-fg);overflow-x:auto}
 .msw2__doneact{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:18px 0 10px}
 @media(max-width:560px){.msw2__grid{grid-template-columns:1fr}.msw2__dot span{display:none}.msw2__bar{gap:8px}}
+
+.msw2__sub{margin:22px 0 8px;font-size:15px;font-weight:700;color:var(--w-fg)}
+.msw2__prep{margin:0 0 4px;padding-left:20px;font-size:14px;line-height:1.6;color:var(--w-fg)}
+.msw2__prep li{margin:0 0 4px}
+.msw2__done a{color:var(--w-accent-tx,#5b9be0)}

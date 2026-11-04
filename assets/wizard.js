@@ -295,6 +295,13 @@
       '<div class="msw2__done">' +
         "<h3>Request sent</h3>" +
         '<p class="msw2__hint">Thanks! We&rsquo;ve got your request and will email you shortly to confirm the exact time.</p>' +
+        '<h4 class="msw2__sub">Before we arrive</h4>' +
+        '<ul class="msw2__prep">' +
+          "<li>Please take your personal belongings out of the vehicle.</li>" +
+          "<li>We bring the equipment. We just need a water tap and a power outlet.</li>" +
+          "<li>Park where we can walk around the whole vehicle.</li>" +
+        "</ul>" +
+        '<p class="msw2__hint"><a href="realwork/index.html">See examples of our work</a> &middot; <a href="policy.html">Our policy</a></p>' +
         '<button type="button" class="msw2__link" data-restart>Start over</button>' +
       "</div>";
     wireRestart();
