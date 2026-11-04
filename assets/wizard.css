@@ -1,7 +1,9 @@
 /* booking wizard — theme via CSS vars set by host page:
    --w-bg --w-card --w-line --w-fg --w-muted --w-accent --w-accent-ink --w-radius */
-.msw2{--w-radius:12px;font-family:inherit;color:var(--w-fg);max-width:720px;min-width:0;margin:0 auto}
-.msw2__body{min-height:470px}
+.msw2{--w-radius:12px;font-family:inherit;color:var(--w-fg);max-width:720px;min-width:0;margin:0 auto;display:flex;flex-direction:column;height:clamp(540px,78vh,680px)}
+.msw2__body{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-right:6px;margin-right:-6px;scrollbar-width:thin;scrollbar-color:var(--w-line) transparent}
+.msw2__bar,.msw2__price,.msw2__nav{flex:none}
+.msw2__done{flex:1 1 auto;min-height:0;overflow-y:auto}
 .msw2 *{box-sizing:border-box}
 .msw2__bar{display:flex;flex-wrap:wrap;gap:6px 4px;margin:0 0 22px}
 .msw2__dot{display:flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--w-muted);flex:1 1 auto;min-width:0}
