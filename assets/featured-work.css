@@ -8,7 +8,7 @@
 .featured-work__caption{flex:1;min-width:0;text-align:center;font-size:13px;line-height:1.5}
 .featured-work__caption a{display:block;color:#fff;text-underline-offset:3px}
 .featured-work__caption a[hidden]{display:none}
-.featured-work__caption span{color:#bbc0c9;font-size:12px}
+.featured-work__caption span{color:#cfd0d3;font-size:12px}
 .featured-work__caption [data-count]{display:inline-block;margin-left:10px}
 .featured-work__cta{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;width:100%;aspect-ratio:4/5;background:linear-gradient(140deg,#1a2230,#101317);text-align:center;text-decoration:none;padding:24px;box-sizing:border-box}
 .featured-work__cta[hidden]{display:none}
